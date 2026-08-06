@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_figma_figma__get_metadata",
+      "mcp__supabase__list_tables",
+      "mcp__supabase__execute_sql",
+      "mcp__supabase__apply_migration",
+      "mcp__supabase__list_storage_buckets",
+      "mcp__supabase__get_project_url",
+      "WebSearch",
+      "WebFetch(domain:pointsmath.com)",
+      "WebFetch(domain:allthingscreditcard.substack.com)",
+      "WebFetch(domain:cardmaven.in)",
+      "mcp__supabase__list_migrations",
+      "WebFetch(domain:www.hsbc.co.in)",
+      "WebFetch(domain:cardinsider.com)",
+      "WebFetch(domain:milesahead.club)",
+      "mcp__supabase__get_advisors",
+      "WebFetch(domain:www.paisabazaar.com)",
+      "WebFetch(domain:www.fijiairways.com)",
+      "Bash(curl *)",
+      "Bash(claude mcp *)",
+      "mcp__plugin_figma_figma__whoami",
+      "mcp__plugin_figma_figma__get_design_context",
+      "Bash(flutter devices *)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "supabase",
+    "figma"
+  ]
+}
