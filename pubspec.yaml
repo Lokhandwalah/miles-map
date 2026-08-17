@@ -59,6 +59,8 @@ flutter:
 
   assets:
     - assets/images/icons/
+    - assets/images/logos/
+    - assets/images/onboarding/
 
   fonts:
     - family: Sora
