@@ -22,7 +22,22 @@
       "Bash(claude mcp *)",
       "mcp__plugin_figma_figma__whoami",
       "mcp__plugin_figma_figma__get_design_context",
-      "Bash(flutter devices *)"
+      "Bash(flutter devices *)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/signin_fixed.png https://www.figma.com/api/mcp/asset/a553457b-9fe8-4cbd-b761-2a25b65246ab.png)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/homepage_fixed.png https://www.figma.com/api/mcp/asset/807c882a-9902-44ea-8d41-dad081a8cd11.png)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/source_56_2.png https://www.figma.com/api/mcp/asset/5940bce8-d3d0-4809-a9e4-aa9332b9b5fa.png)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/target_93_29.png https://www.figma.com/api/mcp/asset/b7323aa9-3f13-44b3-8286-0f837dd4cd58.png)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/merged_cards_screen_fixed.png https://www.figma.com/api/mcp/asset/70ab9a9a-9222-4433-80ec-b18df56ae689.png)",
+      "Bash(curl -sL -o /private/tmp/claude-502/-Users-husain-lokhandwala-Development-Projects-personal-miles-map/aadc2016-f343-4c19-9224-ef8c2267be74/scratchpad/add_card_dialog.png https://www.figma.com/api/mcp/asset/a04f2e66-731a-43d0-a55b-e5f5db5605c7.png)",
+      "Bash(find /private/tmp/claude-502 -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" 2>/dev/null | head -50)",
+      "Read(//private/tmp/claude-502/**)",
+      "Bash(find /var/folders -maxdepth 6 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -newermt \"-30 minutes\" 2>/dev/null | head -20; echo \"---\"; find /tmp -maxdepth 4 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -newermt \"-30 minutes\" 2>/dev/null | head -20; echo \"---claude dirs---\"; find ~/.claude -maxdepth 4 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -newermt \"-30 minutes\" 2>/dev/null | head -20)",
+      "Read(//private/var/folders/**)",
+      "Read(//private/tmp/**)",
+      "Bash(sips -g pixelWidth -g pixelHeight assets/images/icons/app_icon.png)",
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('assets/images/icons/app_icon.png'\\); print\\(im.size, im.mode\\)\")",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/husain.lokhandwala/Development/Projects/personal/miles-map/assets/images/icons/app_icon.png)",
+      "Bash(fvm flutter *)"
     ]
   },
   "enabledMcpjsonServers": [

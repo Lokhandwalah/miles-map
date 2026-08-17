@@ -13,11 +13,13 @@ feature to the project's clean-architecture folder structure.
 
 ## Commands
 
-- `flutter pub get` — install dependencies
-- `dart run build_runner build --delete-conflicting-outputs` — generate code
-- `flutter analyze` — run linter
-- `flutter test` — run tests
-- `flutter run` — start dev build
+Use `fvm flutter`/`fvm dart` (not bare `flutter`/`dart`) for every command below and anywhere else in this project, so the FVM-pinned SDK version is used:
+
+- `fvm flutter pub get` — install dependencies
+- `fvm dart run build_runner build --delete-conflicting-outputs` — generate code
+- `fvm flutter analyze` — run linter
+- `fvm flutter test` — run tests
+- `fvm flutter run` — start dev build
 
 ## Design source priority
 
@@ -115,9 +117,9 @@ When invoked:
 5. If a field or data shape you need doesn't exist yet in the app's
    models, say so explicitly rather than guessing — flag it back to the
    main session so the db-manager agent can be asked to check the schema.
-6. Run `flutter analyze` after writing code and fix any warnings before
+6. Run `fvm flutter analyze` after writing code and fix any warnings before
    finishing — prefer the `dart-flutter:dart-run-static-analysis` skill
-   (below) over calling `flutter analyze` raw, since it also applies
+   (below) over calling `fvm flutter analyze` raw, since it also applies
    mechanical `dart fix` cleanups.
 
 Match spacing, alignment, and hierarchy from the wireframe as closely as
@@ -162,6 +164,27 @@ for the matching one instead of improvising the equivalent by hand:
 Don't force a skill where it doesn't fit (e.g. don't reach for the routing
 skill on a screen that isn't changing navigation) — use judgment based on
 what the current step actually requires.
+
+## Conventions
+
+- No business logic in widgets — all logic goes in notifiers or repositories
+- Barrel exports via feature.dart in each feature root
+- Prefix private widgets with an underscore
+- Text styles always come from `AppTypography` (lib/core/theme/app_typography.dart)
+  — pick the closest existing named style (e.g. `displayLarge`, `bodyMedium`) and
+  only `copyWith` non-scale overrides (color, `.inSora`/`.inMono` family, weight
+  for emphasis). Never call `AppFontConfig.font()` directly at a call site or
+  hand-pick a one-off `fontSize`/`height`/`letterSpacing` combo — if a Figma spec
+  doesn't fit any existing style, flag it back to the main session so the
+  app-designer agent can add/adjust a token instead of improvising locally.
+- Every new image asset goes through `flutter_gen`, never a hardcoded path
+  string. After adding a file under `assets/images/...` (and updating the
+  `flutter.assets` list in `pubspec.yaml` if it's a new directory), run
+  `fvm dart run build_runner build --delete-conflicting-outputs` to regenerate
+  `lib/gen/assets.gen.dart`, then reference it as
+  `Assets.images.<dir>.<name>.image(...)` (widget) or `.path`/`.provider()`
+  (raw path or `ImageProvider`). Never write `Image.asset('assets/images/...')`
+  or `AssetImage('assets/images/...')` with a literal string at a call site.
 
 ## What NOT to do
 
